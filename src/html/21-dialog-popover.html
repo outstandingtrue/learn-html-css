@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dialog 요소와 popover 속성</title>
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/public/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
+    <style>
+      body {
+        font-family: 'SUIT Variable', sans-serif;
+      }
+
+      dialog.panel-dialog::backdrop {
+        background: linear-gradient(to right, #ffcccb, #ccffcc);
+      }
+      /* dialog 본체 */
+      .panel-dialog {
+        border: none;
+        border-radius: 16px;
+        padding: 2rem;
+        max-width: 420px;
+        width: 90%;
+        background-color: #fff;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        font-family: 'Noto Sans KR', sans-serif;
+        color: #222;
+        animation: slideFade 0.3s ease;
+      }
+
+      /* 제목 */
+      .panel-dialog h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: #111;
+      }
+
+      /* 설명 텍스트 */
+      .panel-dialog p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+        color: #555;
+      }
+
+      /* 버튼 영역 */
+      .panel-dialog div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: flex-end;
+      }
+
+      /* 공통 버튼 스타일 */
+      .panel-dialog button,
+      .panel-dialog a {
+        padding: 0.6rem 1.2rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+      }
+
+      /* 각 버튼 스타일 */
+      .panel-dialog a {
+        background-color: #007bff;
+        color: #fff;
+      }
+      .panel-dialog .dismiss-today {
+        background-color: #f0f0f0;
+        color: #333;
+      }
+      .panel-dialog .close-dialog {
+        background-color: #ff5c5c;
+        color: #fff;
+      }
+
+      .panel-dialog .dismiss-today:hover {
+        background-color: #e0e0e0;
+      }
+      .panel-dialog .close-dialog:hover {
+        background-color: #e14a4a;
+      }
+      .panel-dialog a:hover {
+        background-color: #0069d9;
+      }
+
+      /* 애니메이션 */
+      @keyframes slideFade {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+    <script type="module">
+      document.addEventListener('DOMContentLoaded', () => {
+        const showBtn = document.querySelector('.show-dialog');
+        const dialog = document.querySelector('.panel-dialog');
+        const closeBtn = dialog.querySelector('.close-dialog');
+
+        // 혜택 보기 버튼 클릭 시 모달 열기
+        showBtn.addEventListener('click', () => {
+          dialog.showModal();
+        });
+
+        // 닫기 버튼 클릭 시 모달 닫기
+        closeBtn.addEventListener('click', () => {
+          dialog.close();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+
+    <button type="button" class="show-dialog">혜택 보기</button>
+
+    <dialog class="panel-dialog" aria-labelledby="surprise-benefits" aria-describedby="surprise-benefits-details">
+      <h2 id="surprise-benefits">깜짝 혜택</h2>
+      <p id="surprise-benefits-details">쉿! 고객님만을 위한 깜짝 할인 쿠폰 어제 빠뜨린 상품도 할인받고 내일 만나요!</p>
+      <div>
+        <a href="/">쿠폰 확인하기</a>
+        <button type="button" class="dismiss-today">오늘 하루 안보기</button>
+        <button type="button" class="close-dialog">닫기</button>
+      </div>
+    </dialog>
+    <hr />
+    <!-- popover 속성 -->
+    <button type="button" popovertarget="popoverContent" class="button-popover">팝오버 보기</button>
+    <div popover id="popoverContent">
+      <p>팝오버는 툴팁과 비슷한 UI 요소로, 추가적인 정보를 제공하거나 사용자와 상호작용할 수 있는 작은 창을 표시할 때 유용하다.</p>
+    </div>
+  </body>
+</html>

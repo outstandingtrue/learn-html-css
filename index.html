@@ -8,6 +8,84 @@
     <link rel="icon" href="/src/assets/favicon/likelion.svg" />
     <link rel="preload" as="font" href="/src/assets/font/suit/SUIT-Variable.woff2" />
     <link rel="stylesheet" href="/src/assets/font/suit/SUIT-Variable.css" />
+    <style>
+      /* 기본 리셋 */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* 바디 기본 */
+      body {
+        font-family: 'SUIT Variable', sans-serif;
+        background-color: #f9fafb;
+        color: #111;
+        line-height: 1.6;
+        padding: 2rem 1rem;
+      }
+
+      /* 헤더 스타일 */
+      h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      h1 strong {
+        color: #0077ff;
+      }
+
+      /* 컨테이너 */
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      }
+
+      /* 그룹 제목 */
+      .group h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.25rem;
+        border-left: 4px solid #0077ff;
+        padding-left: 0.75rem;
+        color: #333;
+      }
+
+      /* 리스트 */
+      ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+
+      /* 링크 스타일 */
+      ul li a {
+        display: block;
+        padding: 0.75rem 1rem;
+        background-color: #f1f5f9;
+        color: #0077cc;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 500;
+        transition: all 0.2s ease-in-out;
+      }
+      ul li a:hover {
+        background-color: #e2e8f0;
+        color: #005fa3;
+        transform: translateX(4px);
+      }
+
+      /* 반응형 */
+      @media (min-width: 600px) {
+        ul {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
   </head>
   <body>
     <h1>HMTL/CSS <strong>[멋사 프론트엔드 부트캠프 14기]</strong></h1>
@@ -15,23 +93,30 @@
       <div class="group">
         <h2>HTML</h2>
         <ul>
-          <li><a href="/src/html/01-basic-structure.html">HTML 기본 구조 (DTD 예시)</a></li>
-          <li><a href="/src/html/02-heading-paragraph.html">제목과 단락</a></li>
-          <li><a href="/src/html/03-image-figure.html">이미지와 피규어</a></li>
-          <li><a href="/src/html/04-anchor.html">하이퍼링크</a></li>
-          <li><a href="/src/html/05-unordered-ordered-list.html">순차, 비순차 목록</a></li>
-          <li><a href="/src/html/06-definition-list.html">정의형 목록</a></li>
-          <li><a href="/src/html/07-phrasing-element.html">프레이징 요소</a></li>
-          <li><a href="/src/html/08-blockquote-br.html">인용문과 줄바꿈</a></li>
-          <li><a href="/src/html/09-table.html">테이블 관련 요소</a></li>
-          <li><a href="/src/html/10-container-element.html">컨테이너 요소</a></li>
-          <li><a href="/src/html/11-section-main.html">섹션과 메인 요소</a></li>
-          <li><a href="/src/html/12-text-level-element.html">텍스트 레벨 요소</a></li>
-          <li><a href="/src/html/13-address.html">address 요소</a></li>
-          <li><a href="/src/html/14-picture-source.html">picture와 source 요소</a></li>
-          <li><a href="/src/html/15-video-track.html">video 및 iframe 요소</a></li>
-          <li><a href="/src/html/16-iframe-object.html">iframe, object 요소</a></li>
-          <li><a href="/src/html/17-map-area.html">map, area 요소</a></li>
+          <li><a href="/src/html/01-basic-structure.html">📄 HTML 기본 구조 (DTD 예시)</a></li>
+          <li><a href="/src/html/02-heading-paragraph.html">🔠 제목과 단락</a></li>
+          <li><a href="/src/html/03-image-figure.html">🖼️ 이미지와 피규어</a></li>
+          <li><a href="/src/html/04-anchor.html">🔗 하이퍼링크</a></li>
+          <li><a href="/src/html/05-unordered-ordered-list.html">📋 순차, 비순차 목록</a></li>
+          <li><a href="/src/html/06-definition-list.html">📖 정의형 목록</a></li>
+          <li><a href="/src/html/07-phrasing-element.html">✍️ 프레이징 요소</a></li>
+          <li><a href="/src/html/08-blockquote-br.html">💬 인용문과 줄바꿈</a></li>
+          <li><a href="/src/html/09-table.html">📊 테이블 관련 요소</a></li>
+          <li><a href="/src/html/10-container-element.html">📦 컨테이너 요소</a></li>
+          <li><a href="/src/html/11-section-main.html">📑 섹션과 메인 요소</a></li>
+          <li><a href="/src/html/12-text-level-element.html">🔤 텍스트 레벨 요소</a></li>
+          <li><a href="/src/html/13-address.html">🏢 address 요소</a></li>
+          <li><a href="/src/html/14-picture-source.html">🖼️ picture와 source 요소</a></li>
+          <li><a href="/src/html/15-video-track.html">🎥 video 관련 요소</a></li>
+          <li><a href="/src/html/16-iframe-object.html">🧩 iframe, object 요소</a></li>
+          <li><a href="/src/html/17-map-area.html">🗺️ map, area 요소</a></li>
+          <li><a href="/src/html/18-form-input.html">📝 폼(input) 요소</a></li>
+          <li><a href="/src/html/19-form-button.html">🔘 폼(button) 요소</a></li>
+          <li><a href="/src/html/20-form-select-textarea.html">📂 폼(select, textarea) 요소</a></li>
+          <li><a href="/src/html/21-dialog-popover.html">🪟 dialog 요소와 popover속성</a></li>
+          <li><a href="/src/html/22-details-summary.html">🔍 details, summary요소</a></li>
+          <li><a href="/src/html/23-script.html">script요소</a></li>
+          <li><a href="/src/html/24-interective-attribute.html">🙋‍♀️유저 인터렉션 속성</a></li>
         </ul>
       </div>
     </div>
