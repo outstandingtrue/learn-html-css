@@ -1,0 +1,51 @@
+/* 테이블 스타일링 */
+body {
+  margin: 50px;
+}
+
+.table-wrapper {
+  height: 500px;
+  overflow: scroll;
+  position: relative;
+  border: 2px solid #facf63;
+
+  .number {
+    inline-size: 10%;
+  }
+  .name {
+    inline-size: 20%;
+  }
+  .email {
+    inline-size: 30%;
+  }
+  .phone {
+    inline-size: 40%;
+  }
+
+  table.table-styling {
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      position: sticky;
+      left: 0;
+      top: 0;
+    }
+    thead,
+    tfoot {
+      background: #facf63;
+      color: #fff;
+    }
+    tbody {
+      tr {
+        &:nth-child(2n) {
+          background: var(--yellow);
+        }
+      }
+    }
+    tr {
+      height: 40px;
+    }
+  }
+}

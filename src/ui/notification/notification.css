@@ -1,0 +1,62 @@
+body {
+  margin: 50px;
+  background: #e9e9e9;
+}
+hr,
+h2 {
+  margin-bottom: 20px;
+  color: #777;
+}
+
+.notification-wrap {
+  position: relative;
+  width: 100%;
+  padding: 20px 40px 20px 68px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  float: left;
+
+  img {
+    position: absolute;
+    left: 20px;
+  }
+
+  .notification-time {
+    float: right;
+    margin-right: -20px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #22be61;
+  }
+
+  .notification-content {
+    float: left;
+    padding-right: 8px;
+
+    p.title {
+      color: #22be61;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    p {
+      font-size: 14px;
+      color: #9b9a90;
+      font-weight: 400;
+    }
+  }
+  &.rice {
+    p.title,
+    .notification-time {
+      color: #e39042;
+    }
+  }
+}
+
+.notification-list {
+  & li {
+    width: 332px;
+  }
+}

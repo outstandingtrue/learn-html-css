@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>notification</title>
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/public/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/ui/notification/notification.css" />
+  </head>
+  <body>
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+    <h1>notification</h1>
+    <hr />
+    <h2>notification 컴포넌트</h2>
+    <div class="notification-wrap">
+      <img src="/src/assets/svg/pot.svg" alt="" />
+      <div class="notification-time"><span>0</span>분</div>
+      <div class="notification-content">
+        <p class="title">알림 제목</p>
+        <p>사용자에게 알릴 내용을 작성합니다.</p>
+      </div>
+    </div>
+    <hr />
+    <h2>notification 리스트</h2>
+    <ul class="notification-list">
+      <li>
+        <div class="notification-wrap">
+          <img src="/src/assets/svg/pot.svg" alt="" />
+          <div class="notification-time"><span>0</span>분</div>
+          <div class="notification-content">
+            <p class="title">긴 알림 제목 긴 알림 제목 긴 알림 제목 긴 알림 제목</p>
+            <p>사용자에게 알릴 내용 사용자에게 알릴 내용 사용자에게 알릴 내용 사용자에게 알릴 내용 사용자에게 알릴 내용 사용자에게 알릴 내용</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="notification-wrap rice">
+          <img src="/src/assets/svg/rice.svg" alt="" />
+          <div class="notification-time"><span>0</span>분</div>
+          <div class="notification-content">
+            <p class="title">알림 제목</p>
+            <p>사용자에게 알릴 내용을 작성합니다.</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>

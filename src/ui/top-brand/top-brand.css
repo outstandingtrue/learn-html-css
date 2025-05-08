@@ -1,0 +1,41 @@
+body {
+  margin: 50px;
+}
+.top-brand-section {
+  width: 100%;
+  display: flow-root;
+  h2 {
+    span {
+      font-weight: 400;
+      font-size: 1rem;
+      display: block;
+    }
+    span[lang='en'] {
+      font-weight: bold;
+      font-size: 1.25rem;
+      margin-bottom: 2px;
+    }
+  }
+  li {
+    float: left;
+    width: calc(100% / 5 - (36px * 4 / 5));
+    margin: 28px 36px 0 0;
+    text-align: center;
+
+    &:nth-child(5n) {
+      margin-right: 0;
+    }
+    figure {
+      picture {
+        background: #f5f7fa;
+        border-radius: 6px;
+        margin-bottom: 12px;
+      }
+      figcaption {
+        a {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
