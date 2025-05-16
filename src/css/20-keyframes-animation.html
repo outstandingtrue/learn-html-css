@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/public/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/css/styles/20-keyframes-animation.css" />
+    <script type="module" src="/src/js/20-keyframes-animation.js"></script>
+  </head>
+  <body>
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+    <h1>CSS 키프레임 애니메이션</h1>
+    <br />
+    <div class="like" hidden>멋쟁이</div>
+    <div class="description">
+      <ul>
+        <li>animation:</li>
+        <li><span>* name</span> : 키프레임 이름</li>
+        <li><span>* duration</span> : 실행 시간</li>
+        <li><span>timing-function</span> : 애니메이션 속도 변화 조정</li>
+        <li><span>delay</span> : 실행 지연시간</li>
+        <li><span>iteration-count</span> : 애니메이션 반복 횟수</li>
+        <li><span>direction</span> : 방향(정방향, 역방향, 번갈아)</li>
+        <li><span>fill-mode</span> : 시작 전/후에 from 혹은 to 스타일 유지</li>
+        <li><span>play-state</span> : 재생, 일시정지 가능 속성</li>
+      </ul>
+    </div>
+    <hr />
+    <div class="container">
+      <!-- fade -->
+      <div class="case fade">
+        <strong>fade 애니메이션</strong>
+        <div class="controls">
+          <button type="button" class="toggle-animation button">재생</button>
+          <button type="button" class="reset-animation button">초기화</button>
+        </div>
+        <div class="target-animation">멋장이</div>
+      </div>
+      <!-- shrink -->
+      <div class="case shrink">
+        <strong>shrink 애니메이션</strong>
+        <div class="controls">
+          <button type="button" class="toggle-animation button">재생</button>
+          <button type="button" class="reset-animation button">초기화</button>
+        </div>
+        <div class="target-animation">멋장이</div>
+      </div>
+      <!-- bounce -->
+      <div class="case bounce">
+        <strong>bounce 애니메이션</strong>
+        <div class="controls">
+          <button type="button" class="toggle-animation button">재생</button>
+          <button type="button" class="reset-animation button">초기화</button>
+        </div>
+        <div class="target-animation">멋장이</div>
+        <p>💡 position보다 transform을 사용하는 것이 사용성이 좋음.</p>
+      </div>
+      <!-- shake -->
+      <div class="case shake">
+        <strong>shake 애니메이션</strong>
+        <div class="controls">
+          <button type="button" class="toggle-animation button">재생</button>
+          <button type="button" class="reset-animation button">초기화</button>
+        </div>
+        <div class="target-animation">멋장이</div>
+      </div>
+      <!-- spin -->
+      <div class="case spin">
+        <strong>spin 애니메이션</strong>
+        <div class="controls">
+          <button type="button" class="toggle-animation button">재생</button>
+          <button type="button" class="reset-animation button">초기화</button>
+        </div>
+        <div class="target-animation">멋장이</div>
+      </div>
+      <!-- flip -->
+      <div class="case flip">
+        <strong>flip 애니메이션</strong>
+        <div class="controls">
+          <button type="button" class="toggle-animation button">재생</button>
+          <button type="button" class="reset-animation button">초기화</button>
+        </div>
+        <div class="target-animation">멋장이</div>
+      </div>
+      <!-- wobble -->
+      <div class="case wobble">
+        <strong>wobble 애니메이션</strong>
+        <div class="controls">
+          <button type="button" class="toggle-animation button">재생</button>
+          <button type="button" class="reset-animation button">초기화</button>
+        </div>
+        <div class="target-animation">멋장이</div>
+      </div>
+      <!-- CSS 변수를 활용한 애니메이션 -->
+      <div class="case rotate">
+        <strong>CSS 변수를 활용한 애니메이션</strong>
+        <div class="controls">
+          <button type="button" class="toggle-animation button">재생</button>
+          <button type="button" class="reset-animation button">초기화</button>
+        </div>
+        <div class="target-animation">멋장이</div>
+      </div>
+    </div>
+  </body>
+</html>

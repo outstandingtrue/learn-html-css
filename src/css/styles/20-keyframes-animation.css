@@ -1,0 +1,175 @@
+body {
+  margin: 50px;
+}
+/* 설명 */
+.description {
+  margin-bottom: 20px;
+  li {
+    &:first-child {
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    margin-bottom: 8px;
+    span {
+      padding: 4px 8px;
+      background: #f2f3f4;
+      border-radius: 4px;
+      color: rgb(255, 110, 110);
+      font-weight: bold;
+      display: inline-block;
+    }
+  }
+}
+/* 예제 레이아웃 */
+.container {
+  margin: 30px auto 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr)); /* 2열 */
+  gap: 30px; /* 열 사이 간격 */
+  max-width: 900px;
+
+  /* case 박스 스타일 */
+  .case {
+    inline-size: 100%;
+    border-radius: 20px;
+    padding: 24px;
+    border: 1px solid #dfe2e7;
+    position: relative;
+    height: fit-content;
+
+    .target-animation {
+      width: 100%;
+      padding: 20px;
+      background: #4a90e2;
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+      color: #fff;
+    }
+    /* 버튼 컨트롤 영역 */
+    .controls {
+      margin: 12px 0 20px 0;
+
+      /* 버튼 스타일 */
+      .button {
+        margin: 0 4px;
+        padding: 14px 24px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        background-color: #f5f7fa;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        color: #333;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      .button:hover {
+        background-color: #dadde2;
+      }
+    }
+    p {
+      margin-top: 12px;
+      color: #666;
+      font-size: 1rem;
+      line-height: 1.6rem;
+    }
+  }
+}
+
+/* hidden */
+.like {
+  width: 100px;
+  border: 5px solid currentColor;
+  padding: 10px;
+  animation: zoom 5s infinite alternate;
+  /*
+  animation:
+  * [name : 키프레임 이름]
+  * [duration : 실행 시간]
+  [timing-function : 애니메이션 속도 변화 조정]
+  [delay : 실행 지연시간]
+  [iteration-count : 애니메이션 반복 횟수]
+  [direction : 방향(정방향, 역방향, 번갈아)]
+  [fill-mode : 시작 전/후에 from 혹은 to 스타일 유지]
+  [play-state] : 재생, 일시정지 가능 속성
+  */
+}
+
+/* 애니메이션 예제 */
+.fade .target-animation {
+  animation: fade 5s 3 paused;
+}
+.shrink .target-animation {
+  animation: shrink 5s 3 paused;
+}
+.bounce .target-animation {
+  animation: bounce 5s 3 paused;
+}
+.shake .target-animation {
+  animation: shake 5s 3 paused;
+}
+.spin .target-animation {
+  width: 100px;
+  aspect-ratio: 1/1;
+  animation: spin 5s alternate paused;
+}
+
+.flip .target-animation {
+  perspective: 500px;
+
+  .target-animation {
+    animation: flip 1s infinite ease-in-out;
+    animation-play-state: paused;
+  }
+}
+.wobble .target-animation {
+  animation: flip 5s alternate paused;
+}
+/* CSS 변수를 활용한 애니메이션 */
+
+.rotate {
+  /* background: #000; */
+}
+.rotate .target-animation {
+  --rotation: 0deg;
+
+  inline-size: 120px;
+  aspect-ratio: 1;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    background: conic-gradient(from var(--rotation), blue 0 30%, transparent 30% 100%);
+    z-index: -1;
+    padding: 5px;
+    inline-size: 100%;
+    block-size: 100%;
+    box-sizing: content-box;
+    translate: -50% -50%;
+    border-radius: 0.5rem;
+    animation: rotate 500ms infinite linear;
+    animation-play-state: paused;
+  }
+
+  &::before {
+    filter: blur(10px);
+  }
+}
+/* 키프레임 규칙 */
+@keyframes zoom {
+  /* 예제 */
+  from {
+    width: 100px;
+    background: yellowgreen;
+  }
+  to {
+    width: 200px;
+    background: yellow;
+  }
+}

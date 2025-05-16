@@ -3,3 +3,8 @@ a {
   text-decoration: none;
   color: inherit;
 }
+/* svg 이미지 */
+.svg-img {
+  inline-size: 100%;
+  block-size: auto;
+}
