@@ -1,25 +1,6 @@
 body {
   margin: 50px;
 }
-/* 설명 */
-.description {
-  margin-bottom: 20px;
-  li {
-    &:first-child {
-      font-weight: bold;
-      font-size: 1.5em;
-    }
-    margin-bottom: 8px;
-    span {
-      padding: 4px 8px;
-      background: #f2f3f4;
-      border-radius: 4px;
-      color: rgb(255, 110, 110);
-      font-weight: bold;
-      display: inline-block;
-    }
-  }
-}
 /* 예제 레이아웃 */
 .container {
   margin: 30px auto 0 auto;
